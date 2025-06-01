@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janardhan Kobaka | Portfolio</title>
+  <style>
+    :root {
+      --bg-dark: #0d1117;
+      --bg-light: #ffffff;
+      --text-dark: #f0f6fc;
+      --text-light: #0d1117;
+      --accent: #58a6ff;
+      --card-bg-dark: #161b22;
+      --card-bg-light: #f6f8fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.3s, color 0.3s;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.light-mode {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--card-bg-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    body.light-mode nav {
+      background: var(--card-bg-light);
+    }
+
+    nav .nav-links a {
+      margin: 0 1rem;
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle, rgba(88,166,255,0.3) 0%, transparent 70%);
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+
+    .theme-toggle button {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      padding: 0.5rem 1rem;
+      margin-left: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg-dark);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    body.light-mode .card {
+      background: var(--card-bg-light);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      line-height: 1.7;
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #333;
+      color: #888;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+      display: inline-block;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #3b8ed9;
+    }
+
+    @media (max-width: 600px) {
+      nav .nav-links a {
+        margin: 0 0.5rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-dQzW+rBzHh6GFlSdf2H0Otzuz1rsCmCLH7dT+BiNjhJh+Gz0gXYMPAtBu5AViUw+ZJwKYoUlDQNyxKrwoYAj3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <button onclick="setTheme('dark')">🌙 Dark</button>
+    <button onclick="setTheme('light')">☀️ Light</button>
+  </div>
+
+  <nav>
+    <strong style="color: var(--accent)">Janardhan</strong>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Janardhan Kobaka</h1>
+    <p>Tableau Developer | Data Analyst | ML Explorer</p>
+    <a class="download-btn" href="resume.pdf" download>📄 Download Resume</a>
+  </section>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Experienced in Tableau, SQL, Testing, and ML. Passionate about building data-driven solutions and exploring innovative ideas.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>📊 Tableau (KPI dashboards, LODs, Parameters)</li>
+        <li>🛢 SQL (Joins, Optimization, Stored Procedures)</li>
+        <li>🧪 Testing (Manual, Regression, UI)</li>
+        <li>🤖 Machine Learning (LightGBM, CNN, SHAP)</li>
+        <li>🖼 Image Processing (YOLO, Labeling, Annotation)</li>
+        <li>💻 Python (NumPy, Pandas, Matplotlib, Streamlit)</li>
+        <li>🌐 Web (HTML, CSS, JavaScript, GitHub Pages)</li>
+        <li>🛠 Tools (JIRA, GitHub, VS Code, Excel, PowerPoint)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>HR Attrition Prediction:</strong> LightGBM + CNN, SHAP Visuals, Deployed with Streamlit</li>
+        <li><strong>Retail Sales Dashboard:</strong> Dynamic Tableau Dashboard, LOD & Parameters</li>
+        <li><strong>YOLO Object Detection:</strong> Trained model with 89% mAP, automation pipeline</li>
+        <li><strong>Interactive Portfolio Website:</strong> Built with HTML/CSS/JavaScript, Light/Dark Mode Toggle, Responsive Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="card">
+      <h2>Certifications</h2>
+      <ul>
+        <li><strong>Tableau Developer Certification</strong> – Simplilearn</li>
+        <li><strong>Python for Data Science</strong> – Great Learning</li>
+        <li><strong>Machine Learning Foundations</strong> – Coursera (University of Washington)</li>
+        <li><strong>Data Visualization with Python</strong> – IBM</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: janardhan@example.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/janardhankobaka">linkedin.com/in/janardhankobaka</a></p>
+      <p>GitHub: <a href="https://github.com/janardhankobaka">github.com/janardhankobaka</a></p>
+      <p>Tableau Public: <a href="https://public.tableau.com/app/profile/janardhan.kobaka">View My Work</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/janardhankobaka" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/janardhankobaka" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://public.tableau.com/app/profile/janardhan.kobaka" target="_blank" title="Tableau Public"><i class="fas fa-chart-bar"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Janardhan Kobaka. All Rights Reserved.
+  </footer>
+
+  <script>
+    function setTheme(mode) {
+      if (mode === 'light') {
+        document.body.classList.add('light-mode');
+      } else {
+        document.body.classList.remove('light-mode');
+      }
+    }
+  </script>
+</body>
+</html>
